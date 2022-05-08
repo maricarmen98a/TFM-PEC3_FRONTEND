@@ -1,0 +1,28 @@
+.footer {
+  padding: 10px;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  position: fixed; 
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+.footer a {
+  text-decoration: none;
+  color: var(--button);
+}
+.footer a:hover, .link-activo {
+  color: var(--button-click);
+}
+.footer div {
+  text-align: center;
+}
+
+.footer img {
+  max-width: 23px;
+  padding-top: 3px;
+}

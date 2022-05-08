@@ -1,0 +1,8 @@
+<div class="component">
+  <nav class="sesion">
+    <div class="logo-div"><a routerLink="/"><img class="logo" src="../assets/aeriolar.png" alt="logo"></a></div>
+    <a routerLink="/profile" *ngIf="isSignedIn">Perfil de usuario</a>
+    <a *ngIf="!isSignedIn" routerLink="/login" ><fa-icon routerLinkActive="class1" class="circle-icon" [icon]="faUser"></fa-icon></a>
+  </nav>
+  <button (click)="signOut()" *ngIf="isSignedIn">Cerrar sesión</button>
+</div>

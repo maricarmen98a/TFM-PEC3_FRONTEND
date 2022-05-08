@@ -1,0 +1,108 @@
+<!--      
+      <div class="form-group">
+        <label>Correo electrónico*</label>
+        <input type="email" class="form-control" [formControl]="email" />
+      </div>
+      
+      <div *ngIf="validateForm">
+        <mat-error class="error" *ngIf="email.hasError('email') && !email.hasError('required')">
+          Por favor, introduzca una dirección de correo válida.
+        </mat-error>
+        <mat-error class="error" *ngIf="email.hasError('required')">
+            El correo electrónico es <strong>obligatorio</strong>
+        </mat-error>
+      </div>
+      <div class="form-group">
+        <label>Contraseña*</label>
+        <input minlength="8" type="password" class="form-control" [formControl]="password" />
+      </div>
+     
+      <div *ngIf="validateForm">
+        <mat-error class="error" *ngIf="password.hasError('minlength') && !password.hasError('required')">
+          La contraseña tiene que tener 8 caracteres mínimo.
+        </mat-error>
+        <mat-error class="error" *ngIf="password.hasError('required')">
+          La contraseña es <strong>obligatoria</strong>
+        </mat-error>
+      </div>
+      <div class="form-group">
+        <label>Confirme contraseña*</label>
+        <input minlength="8"
+          type="password"
+          class="form-control"
+          [formControl]="password_confirmation"
+        />
+      </div>
+   
+      <div *ngIf="validateForm">
+        <mat-error class="error" *ngIf="password_confirmation.hasError('minlength') && !password_confirmation.hasError('required')">
+          La contraseña tiene que tener 8 caracteres mínimo.
+        </mat-error>
+        <mat-error class="error" *ngIf="password_confirmation.hasError('required')">
+          La contraseña es <strong>obligatoria</strong>
+        </mat-error>
+      </div>
+     
+     <div *ngIf="usuarioRepetido">
+      <mat-error class="error">
+        El usuario ya existe.
+      </mat-error>
+     </div>
+     <div *ngIf="contrasenasDiferentes">
+      <mat-error class="error">
+        Las contraseñas no coinciden.
+      </mat-error>
+     </div>
+      <div class="button">
+        <div>
+          <button type="submit">
+            Registrarse
+          </button>
+        </div>
+      </div>
+      <div class="asterisco">*Todos los campos marcados son obligatorios</div>
+    </form>
+  </div>
+ -->
+ <div class="login">
+  <form class="form-login" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <h3>Registrarse</h3>
+    <div class="form-group">
+      <label>Nombre</label>
+      <input type="text" class="form-control" formControlName="name" />
+    </div>
+    <div class="error" *ngIf="errors?.name">
+      {{ errors?.name }}
+    </div>
+    <div class="form-group">
+      <label>Correo electrónico</label>
+      <input type="email" class="form-control" formControlName="email" />
+    </div>
+    <div class="error" *ngIf="errors?.email">
+      {{ errors?.email }}
+    </div>
+    <div class="form-group">
+      <label>Contraseña</label>
+      <input type="password" class="form-control" formControlName="password" />
+    </div>
+    <div class="error" *ngIf="errors?.password">
+      {{ errors?.password }}
+    </div>
+    <div class="form-group">
+      <label>Confirme contraseña</label>
+      <input
+        type="password"
+        class="form-control"
+        formControlName="password_confirmation"
+      />
+    </div>
+    <div class="error" *ngIf="errors?.password_confirmation">
+      {{ errors?.password_confirmation }}
+    </div>
+    <button type="submit">
+      Registrarse
+    </button>
+  </form>
+</div>
+© 2022 GitHub, Inc.
+Terms

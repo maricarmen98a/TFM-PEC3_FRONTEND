@@ -1,0 +1,44 @@
+:root {
+    --button: #BB1D1D;
+}
+
+
+/* HEADER */
+.sesion {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-right: 15px;
+    display: flex;
+    
+}
+.logo {
+    max-width: 150px;
+     margin-left: 10%;
+}
+.logo-div {
+    display: flex;
+    justify-content: center;
+    flex: 2;
+}
+.circle-icon {
+    padding: 9px;
+    border-radius: 100%;
+    color: var(--button);
+    opacity: 88%;
+} 
+.sesion fa-icon {
+    font-size: 30px;
+}
+.class1 {
+    color: var(--button-click);
+}
+.circle-icon:hover {
+    color: var(--button-click);
+}
+/* GENERAL */
+
+button {
+    background-color: var(--button);
+    height: 30px;
+    width: 120px;
+}

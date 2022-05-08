@@ -1,0 +1,60 @@
+select {
+    max-height: 20px;
+}
+.caja-mat {
+    height: 480px;
+    padding: 10px;
+    display: block;
+    text-align: center;
+}
+.caja__boton {
+    padding-top: 20px;
+}
+.boton-cambiar {
+    max-width: 20px;
+}
+.boton-buscar, .bookingStatus {
+    margin-top: 20px;
+}
+.form-flight {
+    display: contents;
+}
+@media screen and (min-width: 540px) {
+    .caja-mat__flex, .caja-mat {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      
+    }
+}
+#startDate, #endDate {
+    text-align: center;
+}
+.form-date {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+.form-date__label {
+    font-family: "Helvetica", arial, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    padding-bottom: 8px;
+}
+.bookingBox, .table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.form-userinfo {
+    padding: 10px;
+}
+.form-userinfo form {
+    padding: 10px;
+}
+.form-userinfo form button {
+    margin-top: 10px;
+}
